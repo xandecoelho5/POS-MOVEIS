@@ -3,21 +3,11 @@ package br.edu.utfpr.flexcalculator
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import br.edu.utfpr.flexcalculator.databinding.ActivityMainBinding
-import com.google.android.material.textfield.TextInputEditText
-
-//<item>Gasolina</item>
-//<item>Álcool</item>
-//<item>Diesel</item>
-//<item>Gás Natural</item>
-//<item>Flex</item>
+import java.text.NumberFormat
 
 private enum class Fuel(val label: String, val consumptionPerLiter: Double) {
     GASOLINE("Gasolina", 4.69),
@@ -42,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.fuelSearch1.setOnClickListener { searchFuel1(it) }
-        binding.fuelSearch2.setOnClickListener { searchFuel2(it) }
-        binding.calculate.setOnClickListener { calculate(it) }
+        binding.fuelSearch1.setOnClickListener { searchFuel1() }
+        binding.fuelSearch2.setOnClickListener { searchFuel2() }
+        binding.calculate.setOnClickListener { calculate() }
     }
 
     private val register =
@@ -65,15 +55,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    private fun searchFuel1(view: View) {
+    private fun searchFuel1() {
         Intent(this, FuelListActivity::class.java).let { register.launch(it) }
     }
 
-    private fun searchFuel2(view: View) {
+    private fun searchFuel2() {
         Intent(this, FuelListActivity::class.java).let { register1.launch(it) }
     }
 
-    private fun calculate(view: View) {
+    private fun calculate() {
         val fuel1 = binding.fuelConsumption1.text.toString()
         val fuel2 = binding.fuelConsumption2.text.toString()
 
@@ -86,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         val autonomy1 = price1 / consumptionPerLiter1
         val autonomy2 = price2 / consumptionPerLiter2
 
-        val numberFormat = java.text.NumberFormat.getCurrencyInstance()
+        val numberFormat = NumberFormat.getCurrencyInstance()
         val formattedAutonomy1 = numberFormat.format(autonomy1)
         val formattedAutonomy2 = numberFormat.format(autonomy2)
 
