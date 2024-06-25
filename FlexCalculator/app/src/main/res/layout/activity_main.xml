@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fuelList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fuelConsumption1TextInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:hint="@string/consumo_combust_vel_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fuelConsumption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/fuelSearch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="@string/buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/fuelConsumption1TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fuelConsumption1TextInput"
+        app:layout_constraintTop_toTopOf="@+id/fuelConsumption1TextInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fuelConsumption2TextInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/consumo_combust_vel_2"
+        app:layout_constraintStart_toStartOf="@+id/fuelConsumption1TextInput"
+        app:layout_constraintTop_toBottomOf="@+id/fuelConsumption1TextInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fuelConsumption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/fuelSearch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/fuelConsumption2TextInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fuelConsumption2TextInput"
+        app:layout_constraintTop_toTopOf="@+id/fuelConsumption2TextInput" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/literFuelValue1TextInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/valor_litro_combust_vel_1"
+        app:layout_constraintStart_toStartOf="@+id/fuelConsumption1TextInput"
+        app:layout_constraintTop_toBottomOf="@+id/fuelConsumption2TextInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/literFuelValue1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/literFuelValue2TextInput"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/valor_litro_combust_vel_2"
+        app:layout_constraintStart_toStartOf="@+id/fuelConsumption1TextInput"
+        app:layout_constraintTop_toBottomOf="@+id/literFuelValue1TextInput">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/literFuelValue2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/o_mais_barato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/literFuelValue2TextInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

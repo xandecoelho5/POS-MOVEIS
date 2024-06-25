@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="produtos">
+        <item>Arroz</item>
+        <item>Feijão</item>
+        <item>Macarrão</item>
+        <item>Óleo</item>
+        <item>Sal</item>
+        <item>Açúcar</item>
+        <item>Café</item>
+        <item>Leite</item>
+        <item>Carne</item>
+        <item>Frango</item>
+        <item>Peixe</item>
+        <item>Frutas</item>
+        <item>Verduras</item>
+        <item>Legumes</item>
+        <item>Doces</item>
+        <item>Salgados</item>
+        <item>Refrigerantes</item>
+        <item>Sucos</item>
+        <item>Água</item>
+        <item>Cerveja</item>
+        <item>Vinho</item>
+        <item>Whisky</item>
+        <item>Vodka</item>
+        <item>Rum</item>
+        <item>Tequila</item>
+        <item>Gin</item>
+        <item>Conhaque</item>
+        <item>Licor</item>
+        <item>Champanhe</item>
+        <item>Espumante</item>
+        <item>Prosecco</item>
+        <item>Cachaça</item>
+        <item>Agua de Coco</item>
+        <item>Chá</item>
+        <item>Café</item>
+        <item>Leite</item>
+        <item>Chocolate</item>
+        <item>Requeijão</item>
+        <item>Manteiga</item>
+        <item>Queijo</item>
+        <item>Iogurte</item>
+        <item>Presunto</item>
+        <item>Salame</item>
+        <item>Linguiça</item>
+        <item>Bacon</item>
+        <item>Peito de Peru</item>
+        <item>Peito de Frango</item>
+        <item>Peito de Pato</item>
+        <item>Peito de Ganso</item>
+        <item>Peito de Avestruz</item>
+        <item>Peito de Pomba</item>
+    </string-array>
+</resources>
