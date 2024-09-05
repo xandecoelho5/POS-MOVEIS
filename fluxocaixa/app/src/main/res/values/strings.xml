@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FluxoCaixa</string>
+    <string name="tipo">Tipo:</string>
+    <string name="detalhe">Detalhe:</string>
+    <string name="valor">Valor:</string>
+    <string name="data_lanc">Data Lanc.:</string>
+    <string name="lancar">Lançar</string>
+    <string name="ver_lancamentos">Ver Lançamentos</string>
+    <string name="saldo">Saldo</string>
+    <string name="nenhum_lancamento_encontrado">Nenhum lançamento encontrado</string>
+</resources>
