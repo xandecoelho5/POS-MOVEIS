@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:floor/floor.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -5,7 +6,7 @@ part 'quote.g.dart';
 
 @JsonSerializable()
 @entity
-class Quote {
+class Quote extends Equatable {
   @primaryKey
   final int? id;
   final String? content;
@@ -20,4 +21,7 @@ class Quote {
   String toString() {
     return 'Quote{id: $id, content: $content, author: $author}';
   }
+
+  @override
+  List<Object?> get props => [id, content, author];
 }

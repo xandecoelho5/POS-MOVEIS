@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nfc_sync/dao/quote_dao.dart';
 import 'package:nfc_sync/models/quote.dart';
-import 'package:provider/provider.dart';
 
 class QuotesScreen extends StatelessWidget {
   const QuotesScreen({super.key});
@@ -12,6 +12,14 @@ class QuotesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('All Quotes'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () {
+              Navigator.of(context).pushNamed('/add-quote');
+            },
+          ),
+        ],
       ),
       body: StreamBuilder<List<Quote>>(
         stream: context.read<QuoteDao>().findAllQuotes(),

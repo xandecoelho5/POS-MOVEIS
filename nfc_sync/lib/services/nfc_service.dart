@@ -10,11 +10,9 @@ class NFCService {
   }
 
   Future<void> writeQuoteTag() async {
-    print('writing');
     NfcManager.instance.startSession(onDiscovered: (NfcTag tag) async {
       var ndef = Ndef.from(tag);
       if (ndef == null || !ndef.isWritable) {
-        print('Tag is not NDEF writable');
         NfcManager.instance.stopSession(errorMessage: 'Tag not writable');
         return;
       }
